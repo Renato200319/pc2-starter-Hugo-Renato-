@@ -22,6 +22,8 @@ export default {
       //TODO: implementar. fija la capital del input.
     },
     adivinarCapital() {
+      if(adivinanza == country.capital)
+      puntaje = punataje+1
       //TODO: implementar. verifica se la adivinanza es correcta.
     },
   },
@@ -37,6 +39,30 @@ export default {
     />
     <button @click="adivinarCapital">Adivina!</button>
     <div class="countries-container">
+      <div class="country" @click="clickeable ? $emit('click') : null">
+    <img
+      width="200"
+      
+      height="200"
+
+      :src="`https://countryflagsapi.com/png/${code}`"
+    />
+    <h1> {{ name }}</h1>
+    <h2>
+      capital: {{ capital }}
+    </h2>
+    <h3>
+      moneda: {{ currency_name }} ({{ currency }})
+    </h3>
+    <h3>
+      region: {{ region }}
+    </h3>
+  <!--TODO: Poblar el HTML con las propiedades. Usar https://countryflagsapi.com/png/${code}-->
+  <img
+      width="200"
+      height="200"
+    />
+  </div>
       <!--TODO: CREAR EL COMPONENTE PARA VISUALIZAR EL PAIS-->
     </div>
   </div>
