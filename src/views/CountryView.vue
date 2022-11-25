@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-  <div class="country">
+  <div class="country" @click="clickeable ? $emit('click') : null">
     <!--TODO: Poblar el HTML con las propiedades. Usar https://countryflagsapi.com para la bandera-->
     <img
       width="400"
